@@ -10,6 +10,13 @@ public class AutowiredBean {
      */
     private SpringBean springBean;
 
+    // 생성자 주입 방식 사용
+    @Autowired
+    public AutowiredBean(SpringBean springBean) {
+        this.springBean = springBean;
+    }
+
+
     public String sayHello() {
         return springBean.hello();
     }
